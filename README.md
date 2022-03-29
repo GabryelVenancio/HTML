@@ -36,9 +36,13 @@ HTML-> Hyper Text Markup Language(Linguagem de marcação de hiper texto)
 Estrutura básica de uma página html
 
 ```html
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title>Teste</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
   </head>
   <body></body>
 </html>
