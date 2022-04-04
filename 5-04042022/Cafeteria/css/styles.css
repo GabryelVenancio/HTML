@@ -1,0 +1,304 @@
+/*
+Arquivo css para formatação do site da cafeteria
+*/
+
+/*
+Aplicar a formatação a todos os elementos. Usaremos o 
+asterisco(*)
+*/
+
+* {
+  /* zerar as margens externas dos elementos */
+  margin: 0;
+  /* zerar as margens internas dos elementos */
+  padding: 0;
+  /* ajuste das caixas(box) dos elementos */
+  box-sizing: border-box;
+}
+header {
+  height: 300px; /*altura da caixa*/
+  /* Adicionar uma imagem ao fundo */
+  background-image: url("../img/cafe5.jpg");
+  /* ajustar a largura da imagem em 100% */
+  background-size: 100%;
+  /* ajustar a posição em x e y da imagem de fundo */
+  background-position: 0 -120px;
+  /* animação no fundo */
+  transition: ease 1s;
+  padding-top: 100px;
+}
+h1 {
+  text-align: center;
+  font-family: "verdana";
+  color: white;
+  /* aplicar uma sombra no texto */
+  text-shadow: 10px 10px 5px black;
+}
+
+nav {
+  background-color: darkred;
+  text-align: center;
+}
+
+nav ul li {
+  /* dispor os itens da lista(li) em linha */
+  display: inline-block;
+  /* aumentar a distância entre os elementos */
+  padding: 10px;
+  transition: ease 0.5s;
+}
+/* ao passar o mouse sobre o link o fundo link deve 
+alter sua cor */
+nav ul li:hover {
+  background-color: tomato;
+}
+
+nav ul li a {
+  font-family: "verdana";
+  font-size: 10pt;
+  color: white;
+  /* retirar o underline do link */
+  text-decoration: none; /*nenhum*/
+}
+
+footer {
+  height: 300px; /*altura em 300px*/
+  background-color: black;
+  color: white;
+  font-family: "arial";
+  padding-top: 50px;
+  /* dispor de forma flexível e em linha */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+footer div {
+  width: 20%;
+}
+
+#redes ul li {
+  display: inline-block;
+  margin-left: 10px;
+}
+#redes ul li a img {
+  width: 40px;
+  height: 40px;
+}
+/* ------------- Início do css da home ------------------ */
+h2 {
+  font-family: "arial";
+  font-size: 20pt;
+  margin: 50px;
+  /* borda na parte inferior(bottom) do h2 */
+  border-bottom: 1px solid darkred;
+}
+
+#home p {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Verdana;
+  font-size: 12pt;
+  line-height: 30pt; /*espaçamento entre linhas*/
+  text-align: justify;
+}
+
+#imgHome {
+  text-align: center;
+}
+#imgHome img {
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  border-radius: 100px;
+  opacity: 0.7;
+  transition: ease 0.5s;
+  /* mudar o ponteiro do mouse para uma mão */
+  cursor: pointer;
+}
+#imgHome img:hover {
+  transform: scale(1.2);
+  opacity: 1;
+}
+/* -------------- Fim do estilo da home ---------------- */
+
+/* -------------- início do estilo da história ---------------- */
+#historia p {
+  width: 70%;
+  font-family: arial;
+  font-size: 12pt;
+  line-height: 30pt;
+  text-align: justify;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#imgHistoria {
+  text-align: center;
+}
+#imgHistoria img {
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+}
+iframe {
+  width: 100%;
+  height: 500px;
+  margin: 20px;
+}
+/* --------- Fim do historia ------- */
+
+/* ---------Inicio do cardápio ------ */
+h3 {
+  font-family: arial;
+  font-size: 30pt;
+  margin: 30px;
+}
+
+#linha {
+  padding: 30px;
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; /*quebra de linha*/
+  box-shadow: 2px 2px 10px black;
+  justify-content: center;
+}
+
+#linha div {
+  width: 30%;
+  margin: 10px;
+  border: 1px solid silver;
+}
+#linha div img {
+  width: 100%;
+  height: 300px;
+}
+#linha div h4 {
+  font-family: arial;
+  font-size: 15pt;
+  margin: 10px;
+}
+
+#linha div p {
+  font-family: arial;
+  font-size: 15pt;
+  color: red;
+  margin: 10px;
+  font-weight: bold;
+}
+
+/* ----------------- Formatação CSS para a página contato --------- */
+main form {
+  width: 40%;
+  padding: 10px;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+}
+main form input[type="text"],
+main form input[type="email"],
+main form input[type="tel"],
+main form select,
+main form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 0px;
+  border-bottom: 1px solid silver;
+  border-radius: 5px;
+  display: block;
+}
+main form input[type="tel"],
+main form select {
+  width: 30%;
+}
+main form textarea {
+  height: 250px;
+  border: 1px solid silver;
+  margin-bottom: 10px;
+}
+
+main form input[type="submit"] {
+  padding: 10px;
+  border: 0px;
+  background-color: teal;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  margin-left: 45%;
+}
+
+#mapa iframe {
+  width: 90%;
+  height: 500px;
+}
+
+/* ---------- Área dos breakpoints --------------------- */
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 0px) and (max-width: 575px) {
+  header {
+    background-size: cover;
+    background-position: 0px 0px;
+  }
+  nav {
+    width: 150px;
+    height: 100vh; /*altura da tela do dispositivo*/
+    position: absolute; /*definindo uma posição "fixa" na tela*/
+    z-index: 10000; /*empilhamento. Fazendo ficar acima de 9999 itens*/
+    top: 0px; /*posicção inicial de topo 0*/
+    left: -150px; /*posicao inicial a esquerda 0*/
+    padding-top: 100px;
+    text-align: left;
+  }
+  nav ul li {
+    display: block;
+  }
+
+  #imgHome img {
+    border-radius: 0px;
+    opacity: 1;
+    transition: ease 0.5s;
+  }
+  footer {
+    flex-direction: column;
+  }
+  footer div {
+    width: 80%;
+    margin: auto;
+  }
+
+  body {
+    background-color: green;
+  }
+}
+
+@media (min-width: 576px) {
+  body {
+    background-color: black;
+  }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  body {
+    background-color: blue;
+  }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  body {
+    background-color: orange;
+  }
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  body {
+    background-color: teal;
+  }
+}
